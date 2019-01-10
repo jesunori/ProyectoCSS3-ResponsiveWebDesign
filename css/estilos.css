@@ -8,10 +8,10 @@
  body {
    background-color: #02010a;
    font-family: 'Dancing Script',  Verdana, Cursive;
-   margin-left: 15%;
+   margin-left: 10%;
    margin-top: 0;
- 	 width: 70%;
-   font-size: 14px;
+ 	 width: 80%;
+   font-size: 14px; /* Para Laptom le puse 12 pero tenia 14 */
    color: white;
  }
 
@@ -21,12 +21,13 @@
     -moz-border-radius: 10px 10px 0 0;			/* Para Mozilla */
   	-webkit-border-radius: 10px 10px 0 0;		/* para Safari */
     width: 100%;
-    height: 12%;
+    /*height: 12%;*/
  }
 
 .encabezado {
    display: flex;
    flex-direction: row;
+   /*flex-wrap: nowrap;*/
    /*animation: aparece 2s;*/
 }
 
@@ -45,30 +46,38 @@
 
 }
 
-.encabezado h1 {
+.encabezado > div {
+  width: 50%;
+
+}
+
+.encabezado > div h1 {
    font-size: 2.2em;
    padding-left: 3%;
    text-shadow: 2px 2px #02010a;
    text-align: left;
+   margin-top: 3%;
    vertical-align: middle;
-   width: 50%;
 }
 
-.encabezado nav{
-  width: 50%;
-  font-size: 1.5em;
+/*
+.encabezado > div nav{
+  /*font-size: 1.8em;
+  background-color: black;
 }
+*/
 
-.encabezado nav ul {
+.encabezado > div nav ul {
     width: 90%;
     margin-left: 30%;
+    margin-top: 4%;
     list-style-type: none;
-    float: left;
 }
 
-.encabezado nav ul li {
+.encabezado > div nav ul li {
   width: 18%;
   display: inline;
+  font-size: 1.8em;
   text-align: right;
   vertical-align: middle;
   float: left;
@@ -76,7 +85,6 @@
 }
 
 a[href] {
-  /*text-decoration: none;*/
   color: white;
 }
 
@@ -88,40 +96,71 @@ h2 {
   margin: 0;
 }
 
-#contenido{
+#contenedor{
   display: flex;
   flex-direction: column;
-}
-
-#central{
   background-color: #82c3a6;
+  width: 100%;
 }
 
-#central > div figure {
+#contenido{
+  margin: 2% 2% 2% 2%;
+  width: 900px;
+  align-self: center;
+}
+
+#contenido figure {
   margin: 0;
 }
 
-#central > div img {
-  margin: 3% 8% 3% 8%;
-  width: 84%;
+#contenido figure img {
+  width: 100%;
+  box-shadow: 2px 2px #02010a;
+
 }
 
-.secundaria{
+#secundaria, #primaria {
+  background-color: #d5c75f;
+  border: 1px;
+}
+
+.imagenjpg {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
+#secundaria .imagenjpg > div {
+  width: 50%;
+}
 
+#primaria .imagenjpg > div {
+  width: 33.33%;
+}
 
-/*
-section{
-  color: white;
-  width: 100%;
-  height: 500px;
-  background-color: yellow;
+.imagenjpg > div figure {
   margin: 0;
 }
-*/
+
+.imagenjpg > div img {
+  width: 92%;
+  margin: 4% 4% 3% 4%;
+  padding: 0;
+}
+
+.borde {
+  box-shadow: 2px 2px #02010a;
+}
+
+#secundaria .imagenjpg div img[src$='Pelicanos.jpg']:hover {
+  box-shadow: 2px 2px #82c3a6;
+  transform: rotate(10deg);
+}
+
+#secundaria .imagenjpg div img[src$='Retratoc.jpg']:hover {
+  transform: translate(20px, -5px);
+  box-shadow: 2px 2px #82c3a6;
+}
 
 footer {
   clear: both;
@@ -131,7 +170,6 @@ footer {
   border-radius: 0 0 10px 10px;
   -moz-border-radius: 0 0 10px 10px;			/* Para Mozilla */
   -webkit-border-radius: 0 0 10px 10px;		/* para Safari */
-
 }
 
  #piedepagina{
@@ -152,8 +190,6 @@ footer {
 #piedepagina > div p {
   font-size: 1.15em
 }
-
-
 
 .redes {
   list-style-type: none;
