@@ -157,9 +157,24 @@ h2 {
   transform: rotate(10deg);
 }
 
-#secundaria .imagenjpg div img[src$='Retratoc.jpg']:hover {
+#secundaria .imagenjpg div img[src$='Retrato.jpg']:hover {
   transform: translate(20px, -5px);
   box-shadow: 2px 2px #82c3a6;
+}
+
+#primaria .imagenjpg > div:first-child {
+  -webkit-filter:blur(10px);			/* Chrome, Safari, Opera */
+  filter:blur(10px);
+}
+
+#primaria .imagenjpg > div:nth-child(even) {
+  -webkit-filter:grayscale(100%);			/* Chrome, Safari, Opera */
+  filter:grayscale(100%);
+}
+
+#primaria .imagenjpg > div:nth-child(3) {
+  -webkit-filter:sepia(90%);			/* Chrome, Safari, Opera */
+  filter:sepia(90%);
 }
 
 footer {
