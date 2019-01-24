@@ -8,11 +8,14 @@
  body {
    background-color: #02010a;
    font-family: 'Dancing Script',  Verdana, Cursive;
-   margin-left: 10%;
-   margin-top: 0;
- 	 width: 80%;
-   font-size: 14px; /* Para Laptom le puse 12 pero tenia 14 */
+   margin: 0 auto;
+   font-size: 12px;
    color: white;
+ }
+
+ .contenido {
+   width: 900px;
+   margin: 0 auto;
  }
 
  header {
@@ -21,14 +24,13 @@
     -moz-border-radius: 10px 10px 0 0;			/* Para Mozilla */
   	-webkit-border-radius: 10px 10px 0 0;		/* para Safari */
     width: 100%;
-    /*height: 12%;*/
  }
 
 .encabezado {
    display: flex;
    flex-direction: row;
-   /*flex-wrap: nowrap;*/
-   /*animation: aparece 2s;*/
+   flex-wrap: wrap;
+   animation: aparece 2s;
 }
 
 @-webkit-keyframes aparece{
@@ -48,11 +50,10 @@
 
 .encabezado > div {
   width: 50%;
-
 }
 
 .encabezado > div h1 {
-   font-size: 2.2em;
+   font-size: 2.6em;
    padding-left: 3%;
    text-shadow: 2px 2px #02010a;
    text-align: left;
@@ -60,28 +61,24 @@
    vertical-align: middle;
 }
 
-/*
-.encabezado > div nav{
-  /*font-size: 1.8em;
-  background-color: black;
+.encabezado > div nav {
+  margin: 0 auto;
 }
-*/
 
 .encabezado > div nav ul {
-    width: 90%;
-    margin-left: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     margin-top: 4%;
     list-style-type: none;
 }
 
 .encabezado > div nav ul li {
-  width: 18%;
-  display: inline;
-  font-size: 1.8em;
-  text-align: right;
+  width: 33%;
+  font-size: 2.1em;
+  text-align: left;
   vertical-align: middle;
-  float: left;
-  margin-right: 1%;
 }
 
 a[href] {
@@ -103,20 +100,19 @@ h2 {
   width: 100%;
 }
 
-#contenido{
+#contgrande{
   margin: 2% 2% 2% 2%;
-  width: 900px;
+  width: 90%;
   align-self: center;
 }
 
-#contenido figure {
+#contgrande figure {
   margin: 0;
 }
 
-#contenido figure img {
+#contgrande figure img {
   width: 100%;
   box-shadow: 2px 2px #02010a;
-
 }
 
 #secundaria, #primaria {
@@ -190,12 +186,13 @@ footer {
  #piedepagina{
    display: flex;
    flex-direction: row;
+   flex-wrap: nowrap;
  }
 
  #piedepagina > div {
       text-align: left;
-      width: 25%;
-      margin-left: 1.5%;
+      width: 24%;
+      margin-left: 1%;
  }
 
 #piedepagina > div h2 {
@@ -203,7 +200,7 @@ footer {
 }
 
 #piedepagina > div p {
-  font-size: 1.15em
+  font-size: 1.5em;
 }
 
 .redes {
@@ -214,8 +211,66 @@ footer {
 
 .redes > li figure {
     margin: 0;
+    font-size: 1.5em;
 }
 
 .iconoadaptativo {
   width: 8%;
+}
+
+
+@media screen and (max-width: 900px){
+  body {
+    margin-left: 10%;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .contenido {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .encabezado > div {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .encabezado > div h1 {
+     text-align: center;
+  }
+
+  .encabezado > div nav ul {
+      width: 100%;
+      margin-left: 0;
+      text-align: left;
+  }
+
+  .encabezado > div nav ul li {
+    width: 33.3%;
+  }
+
+  #contgrande{
+    margin: 2% 2% 2% 2%;
+    width: 96%;
+  }
+
+  #secundaria .imagenjpg > div {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #primaria .imagenjpg > div {
+    width: 100%;
+  }
+
+  #piedepagina{
+    flex-wrap: wrap;
+  }
+
+  #piedepagina > div {
+    width: 100%;
+    margin: 5%;
+  }
 }
