@@ -48,6 +48,7 @@
 
 }
 
+
 .encabezado > div {
   width: 50%;
 }
@@ -62,11 +63,11 @@
 }
 
 .encabezado > div nav {
-  margin: 0 auto;
+  margin: 0;
 }
 
 .encabezado > div nav ul {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -75,7 +76,7 @@
 }
 
 .encabezado > div nav ul li {
-  width: 33%;
+  width: 28%;
   font-size: 2.1em;
   text-align: left;
   vertical-align: middle;
@@ -221,14 +222,14 @@ footer {
 
 @media screen and (max-width: 900px){
   body {
-    margin-left: 10%;
+    /*margin-left: 10%;*/
     margin: 0 auto;
     width: 100%;
     font-size: 13px;
   }
 
   .contenido {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -242,13 +243,14 @@ footer {
   }
 
   .encabezado > div nav ul {
-      width: 100%;
-      margin-left: 0;
-      text-align: left;
+      width: 85%;
+      margin: 0 auto;
+      text-align: center;
   }
 
   .encabezado > div nav ul li {
-    width: 33.3%;
+    margin: 0 auto;
+    width: 28%;
   }
 
   #contgrande{
@@ -272,5 +274,11 @@ footer {
   #piedepagina > div {
     width: 100%;
     margin: 5%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  body {
+    font-size: 8px;
   }
 }
